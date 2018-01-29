@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang=" ">
+<head>
+  <script>
+// Open the Modal
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+  <style>
+  row > .column {
+    padding: 0 8px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Create four equal columns that floats next to eachother */
+  .column {
+    float: left;
+    width: 25%;
+    height:60%;
+  }
+
+
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+
+  }
+
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #ff0000;
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #ff0000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* Caption text */
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+
+  img.demo {
+    opacity: 0.6;
+      width: 30%;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  img.hover-shadow {
+    transition: 0.3s
+  }
+
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #ff0000
+  }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===========================
+    THEME INFO
+    =========================== -->
+    <meta name="description" content="SantaGo is another free Bootstrap HTML Christmas sales and affiliate page template built and distributed by EvenFly Team as a small Cristmas gift under Creative Commons 3.0 license.">
+    <meta name="keywords" content="Christmas Template, Free Christmas Landing Page, Christmas Affiliate Landing Page, Free Christmas Sales Page Template">
+    <meta name="author" content="Mamun Srizon">
+
+    <!-- ===========================
+    SITE TITLE
+    =========================== -->
+    <title>6i6ant</title>
+
+    <!-- ===========================
+    FAVICONS
+    =========================== -->
+    <link rel="icon" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-ipad-retina.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-iphone-retina.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-iphone.png" />
+
+    <!-- ===========================
+    STYLESHEETS
+    =========================== -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- ===========================
+    FONTS
+    =========================== -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,600|Pacifico' rel='stylesheet' type='text/css'>
+
+    <!-- ===========================
+    GOOGLE ANALYTICS (Optional)
+    =========================== -->
+
+    <!-- #NOTE: Replace this line with your analytics code -->
+
+    <!--ANALYTICS END-->
+
+    <!--[if IE]>
+        <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- ===========================
+    HERO SECTION
+    =========================== -->
+  
+    <div id="hero">
+        <div class="redoverlay">
+            <div class="container">
+                <div class="row">
+                    <div class="herotext">
+                        <h2 class="wow zoomInDown" data-wow-duration="3s">Շատ լավ նվեր ձեր սիրելի մարդու կամ երեխայի համար</h2>
+                        <h1 class="wow flipInY">BOOMMMM ️55.000AMD</h1>
+
+                        <a class="btn btn-reverse wow zoomIn" href="tel:+37495100202">
+                            <h3>Պատվիրեք Ձերը հենց հիմա<span class="optional"></span></h3>
+                        </a><!--#NOTE: texts inside the OPTIONAL tag above would be hidden on smaller mobile screens -->
+
+                        <p class="wow fadeInUp" data-wow-duration="2s"></p>
+
+                        <img class="bigbell wow tada infinite" data-wow-duration="30s" src="img/bell.png" alt="">
+                    </div>
+
+                    <div class="santa wow bounceInDown" data-wow-duration="2s">
+                        <img src="img/santa.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--HERO SECTION END-->
+
+    <!-- ===========================
+    OVERVIEW SECTION
+    =========================== -->
+    <div id="overview" class="container">
+        <!--SECTIONHEAD START-->
+        <div class="sectionhead">
+
+
+            <hr>
+        </div><!--SECTIONHEAD END-->
+
+        <!--OVERVIEW ITEMS-->
+        <div class="row">
+
+            <div class="col-md-6 col-lg-4">
+                <img src="img/2.png" alt="">
+                <h4>Յուրօրինակը Երեւանում</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+            </div><!--ITEM END-->
+
+            <div class="col-md-6 col-lg-4">
+                <img src="img/3.png" alt="">
+                <h4>Որակի երաշխիք</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+            </div><!--ITEM END-->
+
+            <div class="col-md-6 col-lg-4">
+                <img src="img/4.png" alt="">
+                <h4>Համաշխարհային առաքում</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+            </div><!--ITEM END-->
+
+            <div class="col-md-6 col-lg-4">
+                <img src="img/5.png" alt="">
+                <h4>Լայն տեսականի</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+            </div><!--ITEM END-->
+
+            <div class="col-md-6 col-lg-4">
+                <img src="img/6.png" alt="">
+                <h4>Անակնկալ նվերներ</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+            </div><!--ITEM END-->
+
+            <div class="col-md-6 col-lg-4">
+                <img src="img/7.png" alt="">
+                <h4>Վորակյալ սպասարկում</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+            </div><!--ITEM END-->
+        </div><!--OVERVIEW ITEMS END-->
+    </div><!--OVERVIEW SECTION END-->
+    <div class="sectionhead text-center">
+        <h2>Մեր հաճախորդներ</h2>
+
+        <hr>
+    </div>
+    <div class="row">
+    <div class="column" >
+      <img src="img/o1.png" onclick="openModal();currentSlide(1)" class="hover-shadow" style="width:70%">
+    </div>
+    <div class="column">
+      <img src="img/o2.png" onclick="openModal();currentSlide(2)" class="hover-shadow" style="width:70%">
+    </div>
+    <div class="column">
+      <img src="img/o5.png" onclick="openModal();currentSlide(3)" class="hover-shadow" style="width:70%">
+    </div>
+    <div class="column">
+      <img src="img/o4.png" onclick="openModal();currentSlide(4)" class="hover-shadow" style="width:70%">
+    </div>
+
+  </div>
+
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="img/o1.png" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="img/o2.png" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="img/o3.png" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="img/o4.png" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="img/o5.png" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="img/o6.png" style="width:100%">
+      </div>
+
+
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <!-- Thumbnail image controls -->
+
+
+    </div>
+  </div>
+    <!-- ===========================
+    CALL-TO-ACTION SECTION
+    =========================== -->
+
+
+    <!-- ===========================
+    PRODUCTS SECTION
+    =========================== -->
+    <div id="products" class="container">
+
+        <!--SECTIONHEAD START-->
+      <!--SECTIONHEAD END-->
+
+
+        </div><!--FEATURED PRODUCT END-->
+
+        <hr><!--SEPARETOR LINE-->
+
+        <!--SMALL ITEM 1ST ROW START-->
+
+    </div><!--PRODUCTS SECTION END-->
+
+    <!-- ===========================
+    SUBSCRIBE SECTION
+    =========================== -->
+    <div id="subscribe">
+        <div class="darkoverlay">
+            <div class="container text-center">
+
+                <div class="sectionhead">
+                    <h2>Շտապիր <span class="highlight">Գնել</span> քոնը</h2>
+                    <p>Երևանի ամբողջ տարածքում, կառաքվի անվճար MERCEDES G KLAS -ով:))) Հնարավոր է նաև առաքել ցանկացած համալսարան, քոլեջ, դպրոց:
+Կարող եք կապնվել հաղորդագրության միջոցով կամ զանգահարել <br> <a class="highlight">(+374) 095100202</a> <br> Viber<br>WhatsApp
+ </p>
+                </div><!--SECTIONHEAD END-->
+
+                <!--MAILCHIMP FORM START-->
+
+            </div><!--SUBSCRIBE CONTAINER END-->
+        </div><!--OVERLAY END-->
+    </div><!--SUBSCRIBE SECTION END-->
+
+    <!-- ===========================
+    FOOTER
+    =========================== -->
+    <footer class="container text-center">
+        <h2 class="logo"><span class="highlight">6i6ant</span></h2>
+
+        <P>Copyright © 6i6ant.com 2018</P>
+        <hr>
+        <audio controls audio autoplay="autoplay">
+      <source src="gq.ogg" type="audio/ogg">
+      <source src="gq.mp3" type="audio/mpeg">
+
+    </audio>
+    </footer><!--FOOTER END-->
+
+    <!-- ===========================
+    SOCIAL ICONS
+    =========================== -->
+    <div class="sticky-container">
+		<ul class="sticky">
+			<li>
+				<a href="https://www.facebook.com/6i6ant">
+                    <img title="" alt="" src="img/facebook.svg" />
+                    <p>Facebook</p>
+				</a>
+			</li>
+
+
+
+
+
+
+
+
+			<li>
+			    <a href="https://www.instagram.com/6i6ant">
+                    <img title="" alt="" src="img/instagram.svg" />
+                    <p>Instagram</p>
+				</a>
+			</li>
+
+		</ul>
+	</div>
+    <!-- ===========================
+    NECESSARY SCRIPTS
+    =========================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="js/evenfly.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/snowstorm-min.js"></script>
+    <script>new WOW().init();</script>
+</body>
+</html>
